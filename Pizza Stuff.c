@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 int main(){
-    int size, Quantity, A, C, Cheese, time, StdntID, Deliver,hours, minutes;
+    int size, Quantity, A, C, time, Deliver,hours, minutes;
     float Total;
+    char Cheese,StdntID;
     char sizee[50];
     char crust[50];
     char Cheesee[50];
@@ -12,7 +13,7 @@ int main(){
         case 1 :{
             printf("\nA Small Pizza costs $8\nHow many you want?\n");
             scanf("%d", &Quantity);
-            if (Quantity==1 && Quantity>0){
+            if (Quantity==1 && Quantity>0 ){
                 printf("Your Total is $8\n");}
             else if (Quantity>1) {
                 printf("\nCheck Our Multi-Pizza Deals\n2 pizzas cost $15, and 3 pizzas cost $21.\nHow many you want?\n");
@@ -24,7 +25,7 @@ int main(){
         case 2 :{
             printf("\nA Medium Pizza costs 12$\nHow many you want?\n");
             scanf("%d", &Quantity);
-            if (Quantity==1 && Quantity>0){
+            if (Quantity==1 && Quantity>0 ){
                 printf("Your Total is 12$\n");}
             else if (Quantity>1) {
                 printf("\nCheck Our Multi-Pizza Deals\n2 pizzas cost $22, and 3 pizzas cost $33.\nHow many you want?\n");
@@ -68,13 +69,13 @@ int main(){
             Total+=0;
         }
         {
-            printf("\nDo you want Extra Cheese?\nYes (1)\nNO (0)\n");
-            scanf("%d", &Cheese);
-            if (Cheese==1){
+            printf("\nDo you want Extra Cheese?\nYes (y)\nNO (n)\n");
+            scanf(" %c", &Cheese);
+            if (Cheese=='Y' || Cheese=='y'){
             Total+=1.5;
             strcpy(Cheesee, "Extra Cheese");
             }
-            else if (Cheese==0){
+            else if (Cheese=='N' || Cheese=='n'){
             Total+=0;
             strcpy(Cheesee, "No Extra Cheese");
             }
@@ -93,10 +94,10 @@ int main(){
         }
         {
         printf("\nDo you have a Student ID?\nYes (1)\nNO (0)\n");
-        scanf("%d", &StdntID);
-            if (StdntID==1)
+        scanf(" %c", &StdntID);
+            if (StdntID=='Y' || StdntID=='y')
             Total-=2*Quantity;
-            else if(StdntID==0);
+            else if(StdntID=='N' || StdntID=='n');
             Total+0;
         }
         {
