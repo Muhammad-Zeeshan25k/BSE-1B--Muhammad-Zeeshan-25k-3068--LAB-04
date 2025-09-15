@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+    int size;
+     printf("Enter the size of the Pizza you want to order.\n1. Small (1)\n2. Medium (2) \n3. Large (3)\n");
+    scanf("%d", &size);
+    switch (size){
+        case 1 :{
+            printf("\nA Small Pizza costs $8");
+            break ;
+        }
+        case 2 :{
+            printf("\nA Medium Pizza costs 12$");
+            break ;
+        }
+        case 3 :{
+            printf("\nA Large Pizza costs 16$");
+            break ;
+        default : 
+        printf("Invalid Input");
+        return 0;
+        }
+    }
+    return 0;
+}
