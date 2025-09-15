@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int Quantity;
+      printf("\nA Small Pizza costs $8\nHow many you want?\n");
+            scanf("%d", &Quantity);
+            if (Quantity==1 && Quantity>0 ){
+                printf("Your Total is $8\n");}
+            else if (Quantity>1) {
+                printf("\nCheck Our Multi-Pizza Deals\n");
+            }
+    return 0;
+}
